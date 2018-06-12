@@ -117,7 +117,6 @@ class WC_Epos_Payment extends WC_Payment_Gateway{
         $result = json_decode($data);
         if($result->result == 'success')
         {
-            $url = "http://www.youtube.com/watch?v=C4kxS1ksqtw&feature=relate";
             parse_str( parse_url( $result->paymentUrl, PHP_URL_QUERY ), $my_array_of_vars );
             $mdOrder = $my_array_of_vars['mdOrder']; 
             //Order marks as pending
